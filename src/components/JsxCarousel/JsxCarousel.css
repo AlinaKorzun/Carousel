@@ -1,0 +1,95 @@
+.JsxCarousel {
+    width: 100%;
+    height: 100%;
+}
+
+.JsxCarousel__slider {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.JsxCarousel__slider__active, .JsxCarousel__slider__slides, .JsxCarousel__prev__slides {
+    display: inline-block;
+}
+
+.JsxCarousel__slider__active {
+    /*z-index: 5;*/
+    /*position: relative;*/
+    will-change: transform;
+
+}
+
+.JsxCarousel__prev__slides{
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    transform: translate3d(0,0,0);
+}
+
+.JsxCarousel__slider__slides {
+    /*position: relative;*/
+    will-change: transform;
+    /*z-index: 6;*/
+}
+
+.JsxCarousel__prev__slides .JsxCarousel__Slide{
+    position: absolute;
+    top: 0;
+}
+.JsxCarousel__prev__slides .JsxCarousel__Slide:first-child{
+    z-index: 1;
+}
+
+.JsxCarousel__slider__prev {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.JsxCarousel__Slide {
+    display: inline-block;
+    width: 1000px;
+    height: 800px;
+    margin: 0 10px;
+    background-size: cover !important;
+}
+
+.JsxCarousel__thumbnails li {
+    display: inline-block;
+}
+
+.JsxCarousel__thumbnails__thumbnail {
+    height: 90px;
+    width: 170px;
+    margin: 0 10px;
+}
+
+.JsxCarousel__thumbnails__thumbnail div {
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
+}
+
+.JsxCarousel__thumbnails__thumbnail.active div {
+    border: 1px solid red;
+}
+
+@media (max-width: 767px) {
+    .JsxCarousel__Slide{
+        width: 250px;
+        height: 300px;
+    }
+
+    .JsxCarousel__slider__active{
+        /*width: 100%;*/
+    }
+
+    .App{
+        width: 100%;
+    }
+
+    .JsxCarousel__thumbnails__thumbnail{
+        height: 50px;
+        width: 50px;
+    }
+}
